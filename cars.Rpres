@@ -1,0 +1,41 @@
+MTCars
+========================================================
+author: Darius Kharazi
+date: July 21, 2018
+autosize: true
+
+Description
+========================================================
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+Please see the link for additional information about the data: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
+
+Format
+========================================================
+
+A data frame with 32 observations on 11 (numeric) variables. Here are some variables that are of interest to us in the analysis.
+
+- mpg: Miles/(US) gallon
+- cyl: Number of cylinders
+- vs: Engine (0 = V-shaped, 1 = straight)
+- am:	Transmission (0 = automatic, 1 = manual)
+- gear: Number of forward gears
+- carb: Number of carburetors
+
+Goal of Analysis
+========================================================
+
+We want to find the distribution of certain variables, such as transmission type and engine type, in order to better understand the makeup of mpg.
+```{r, echo=FALSE}
+library(ggplot2)
+ggplot(mtcars, aes(x = as.factor(cyl), y = mpg)) +
+  geom_boxplot()
+```
+
+Source
+========================================================
+
+Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.
+
+Please visit the GitHub repository for more information about the code.
